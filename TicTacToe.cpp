@@ -29,6 +29,26 @@ void DisplayBoard(const Board &b){
     }
 }
 
+void GetPlayerChoice(Board &b){
+    bool success = 0;
+    b.row = -1;
+    b.col = -1;
+    std::cout << "Where would you like to play?" << std::endl;
+    std::cout << "Row: ";
+    std::cin >> b.row;
+    while (b.row < 0 || b.row > 2){
+        std::cout << "Not a valid square. Please enter a number from 0 to 2 and somewhere not played yet." << std::endl;
+        std::cin >> b.row;
+    }
+    std::cout << std::endl;
+    std::cout << "Column: ";
+    std::cin >> b.col;
+    while (b.col < 0 || b.col > 2){
+        std::cout << "Not a valid square. Please enter a number from 0 to 2 and somewhere not played yet." << std::endl;
+        std::cin >> b.col;
+    }
+}
+
 void CreateBoard (Board &board){
     for (int i = 0; i < 3; i++){
         for (int j = 0; j < 3; j++){
