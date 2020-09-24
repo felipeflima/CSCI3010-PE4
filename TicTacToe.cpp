@@ -88,5 +88,6 @@ int main (){
         GetPlayerChoice(*board);
         PlaceMarker(*board, player_num);
     }
+    DisplayBoard(*board);
     std::cout << "Game over!" << std::endl;
 }
