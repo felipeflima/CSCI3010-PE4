@@ -52,7 +52,6 @@ void GetPlayerChoice(Board &b){
         std::cin >> b.row;
         b.row--;
     }
-    std::cout << std::endl;
     std::cout << "Column: ";
     std::cin >> b.col;
     b.col--;
@@ -86,6 +85,7 @@ int main (){
         DisplayBoard(*board);
         std::cout << "It's player" << player_num << "'s turn" << std::endl;
         GetPlayerChoice(*board);
+        std::cout << std::endl;
         PlaceMarker(*board, player_num);
     }
     DisplayBoard(*board);
