@@ -8,7 +8,7 @@ struct Board{
     int col;
 };
 
-std::string SquareTypeStringify(SquareType sq){
+std::string SquareTypeStringify(SquareType sq){ // Helper function to DisplayBoard that sets Squaretypes to strings 
     std::string empty = "\U00002B1C";
     std::string x = "\U0000274C"; // or "\xE2\x9D\x8C"
     std::string circle = "\U00002B55";
@@ -20,18 +20,18 @@ std::string SquareTypeStringify(SquareType sq){
 	}
 }
 
-void DisplayBoard(const Board &b){
+void DisplayBoard(const Board &b){ // Function used to Display current state if the board
     std::cout << "   1  2  3" << std::endl;
     for (int i = 0; i < 3; i ++){
         std::cout << i+1 << " ";
         for (int j = 0; j < 3; j++){
-            std::cout << SquareTypeStringify(b.squares[i][j]) + " ";
+            std::cout << SquareTypeStringify(b.squares[i][j]) + " "; // Calls Stringify to translate SquareType in current cell to a string
         }
         std::cout << std::endl;
     }
 }
 
-void CreateBoard (Board &board){
+void CreateBoard (Board &board){ //Creates an empty board by assigning all cells/squares to the empty squaretype
     for (int i = 0; i < 3; i++){
         for (int j = 0; j < 3; j++){
             board.squares[i][j] = SquareType::Empty;
@@ -62,14 +62,14 @@ void GetPlayerChoice(Board &b){
     }
 }
 
-void PlaceMarker(Board &b, int player_num){
+void PlaceMarker(Board &b, int player_num){ //returns the squaretype X/O based on who is currently playing
     if (player_num == 1)
     {
-        b.squares[b.row][b.col] = SquareType::O;
+        b.squares[b.row][b.col] = SquareType::O; // player 1 is O
     }
     else if (player_num == 2)
     {
-        b.squares[b.row][b.col] = SquareType::X;
+        b.squares[b.row][b.col] = SquareType::X; // player 2 is X
     }
 }
 
