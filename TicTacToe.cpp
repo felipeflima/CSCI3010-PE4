@@ -63,7 +63,7 @@ void GetPlayerChoice(Board &b){
     }
 }
 
-int PlaceMaker(Board &b, int player_num){
+int PlaceMarker(Board &b, int player_num){
     if (player_num == 1)
     {
         b.squares[b.row][b.col] = SquareType::O;
@@ -75,7 +75,18 @@ int PlaceMaker(Board &b, int player_num){
 }
 
 int main (){
+    int player_num = 0;
     Board *board = new Board();
     CreateBoard(*board);
-    DisplayBoard(*board);
+    for (int i = 0; i < 9; i++){
+        player_num++;
+        if (player_num == 3){
+            player_num = 1;
+        }
+        DisplayBoard(*board);
+        std::cout << "It's player" << player_num << "'s turn" << std::endl;
+        GetPlayerChoice(*board);
+        PlaceMarker(*board, player_num);
+    }
+    std::cout << "Game over!" << std::endl;
 }
