@@ -31,6 +31,14 @@ void DisplayBoard(const Board &b){
     }
 }
 
+void CreateBoard (Board &board){
+    for (int i = 0; i < 3; i++){
+        for (int j = 0; j < 3; j++){
+            board.squares[i][j] = SquareType::Empty;
+        }
+    }
+}
+
 void GetPlayerChoice(Board &b){
     bool success = 0;
     b.row = -1;
@@ -52,14 +60,6 @@ void GetPlayerChoice(Board &b){
         std::cout << "Not a valid square. Please enter a number from 1 to 3 and somewhere not played yet." << std::endl;
         std::cin >> b.col;
         b.col--;
-    }
-}
-
-void CreateBoard (Board &board){
-    for (int i = 0; i < 3; i++){
-        for (int j = 0; j < 3; j++){
-            board.squares[i][j] = SquareType::Empty;
-        }
     }
 }
 
