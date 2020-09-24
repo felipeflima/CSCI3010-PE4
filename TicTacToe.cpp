@@ -37,6 +37,17 @@ void CreateBoard (Board &board){
     }
 }
 
+int PlaceMaker(Board &b, int player_num){
+    if (player_num == 1)
+    {
+        b.squares[b.row][b.col] = SquareType::O;
+    }
+    else if (player_num == 2)
+    {
+        b.squares[b.row][b.col] = SquareType::X;
+    }
+}
+
 int main (){
     Board *board = new Board();
     CreateBoard(*board);
