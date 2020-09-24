@@ -1,3 +1,12 @@
+/* CSCI 3010 - IPW
+* Felipe Lima and Ziad Alwazzan
+* PE 4 - git & version control (part 2)
+* 09/24/2020
+* Our Program is a fun tic-tac-toe game where there are no winners or losers!
+* How to run:
+~ g++ -std=c++11 TicTacToe.cpp -o play
+~./play
+*/
 #include <iostream>
 
 enum class SquareType {Empty, X, O };
@@ -39,15 +48,14 @@ void CreateBoard (Board &board){ //Creates an empty board by assigning all cells
     }
 }
 
-void GetPlayerChoice(Board &b){
-    bool success = 0;
+void GetPlayerChoice(Board &b){ // get the player choice for where to play and stores into Board elements
     b.row = -1;
     b.col = -1;
     std::cout << "Where would you like to play?" << std::endl;
     std::cout << "Row: ";
-    std::cin >> b.row;
-    b.row--;
-    while (b.row < 0 || b.row > 2){
+    std::cin >> b.row; // user input to row to be played
+    b.row--; // decreases row to translate to computer language (i.e user input 1 means row 0 for computer)
+    while (b.row < 0 || b.row > 2){ // while the user input is not valid
         std::cout << "Not a valid square. Please enter a number from 1 to 3 and somewhere not played yet." << std::endl;
         std::cin >> b.row;
         b.row--;
@@ -75,11 +83,11 @@ void PlaceMarker(Board &b, int player_num){ //returns the squaretype X/O based o
 
 int main (){
     int player_num = 0;
-    Board *board = new Board();
-    CreateBoard(*board);
-    for (int i = 0; i < 9; i++){
+    Board *board = new Board(); // creates a new board
+    CreateBoard(*board); // creates board with elements
+    for (int i = 0; i < 9; i++){ // for 9 turns for each player
         player_num++;
-        if (player_num == 3){
+        if (player_num == 3){ // make sure the playes alternate only between players 1 and 2
             player_num = 1;
         }
         DisplayBoard(*board);

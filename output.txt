@@ -1,0 +1,86 @@
+   1  2  3
+1 ⬜ ⬜ ⬜ 
+2 ⬜ ⬜ ⬜ 
+3 ⬜ ⬜ ⬜ 
+It's player1's turn
+Where would you like to play?
+Row: 1
+Column: 1
+
+   1  2  3
+1 ⭕ ⬜ ⬜ 
+2 ⬜ ⬜ ⬜ 
+3 ⬜ ⬜ ⬜ 
+It's player2's turn
+Where would you like to play?
+Row: 2
+Column: 2
+
+   1  2  3
+1 ⭕ ⬜ ⬜ 
+2 ⬜ ❌ ⬜ 
+3 ⬜ ⬜ ⬜ 
+It's player1's turn
+Where would you like to play?
+Row: 3
+Column: 3
+
+   1  2  3
+1 ⭕ ⬜ ⬜ 
+2 ⬜ ❌ ⬜ 
+3 ⬜ ⬜ ⭕ 
+It's player2's turn
+Where would you like to play?
+Row: 2
+Column: 3
+
+   1  2  3
+1 ⭕ ⬜ ⬜ 
+2 ⬜ ❌ ❌ 
+3 ⬜ ⬜ ⭕ 
+It's player1's turn
+Where would you like to play?
+Row: 2
+Column: 1
+
+   1  2  3
+1 ⭕ ⬜ ⬜ 
+2 ⭕ ❌ ❌ 
+3 ⬜ ⬜ ⭕ 
+It's player2's turn
+Where would you like to play?
+Row: 3
+Column: 1
+
+   1  2  3
+1 ⭕ ⬜ ⬜ 
+2 ⭕ ❌ ❌ 
+3 ❌ ⬜ ⭕ 
+It's player1's turn
+Where would you like to play?
+Row: 1
+Column: 3
+
+   1  2  3
+1 ⭕ ⬜ ⭕ 
+2 ⭕ ❌ ❌ 
+3 ❌ ⬜ ⭕ 
+It's player2's turn
+Where would you like to play?
+Row: 1
+Column: 2
+
+   1  2  3
+1 ⭕ ❌ ⭕ 
+2 ⭕ ❌ ❌ 
+3 ❌ ⬜ ⭕ 
+It's player1's turn
+Where would you like to play?
+Row: 3
+Column: 2
+
+   1  2  3
+1 ⭕ ❌ ⭕ 
+2 ⭕ ❌ ❌ 
+3 ❌ ⭕ ⭕ 
+Game over!
