@@ -63,7 +63,7 @@ void GetPlayerChoice(Board &b){
     }
 }
 
-int PlaceMarker(Board &b, int player_num){
+void PlaceMarker(Board &b, int player_num){
     if (player_num == 1)
     {
         b.squares[b.row][b.col] = SquareType::O;
